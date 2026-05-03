@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carbonpilot
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: carbonpilot
+  template:
+    metadata:
+      labels:
+        app: carbonpilot
+    spec:
+      containers:
+      - name: carbonpilot
+        image: carbonpilot
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000

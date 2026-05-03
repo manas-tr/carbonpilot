@@ -4,6 +4,7 @@ import joblib
 import json
 import pandas as pd
 import numpy as np
+import socket
 
 # Load artifacts once at startup
 MODEL_PATH = "models/energy_model.joblib"
@@ -89,4 +90,9 @@ def home():
 @app.post("/recommend")
 def recommend(job: JobInput):
     results = recommend_logic(job.dict())
-    return {"recommendations": results}
+    best=results[0]
+    return {
+    "pod": socket.gethostname(),
+    "best_config": best,
+    "recommendations": results
+    }
