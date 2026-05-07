@@ -1,0 +1,17 @@
+[
+  "cpus_req",
+  "mem_req",
+  "nodes_alloc",
+  "priority",
+  "timelimit",
+  "job_duration_sec",
+  "avgmemoryutilization_pct",
+  "avgsmutilization_pct",
+  "log_job_duration",
+  "log_timelimit",
+  "log_mem_req",
+  "cpu_node_ratio",
+  "duration_utilization",
+  "mem_cpu_ratio",
+  "gpu_activity"
+]
