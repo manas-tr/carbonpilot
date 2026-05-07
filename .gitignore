@@ -2,8 +2,6 @@ data/processed/*.csv
 !data/processed/*.dvc
 data/raw/
 mlruns/
-models/*.joblib
-models/*.json
 !models/*.dvc
 __pycache__/
 *.pyc
