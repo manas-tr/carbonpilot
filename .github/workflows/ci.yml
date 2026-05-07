@@ -34,17 +34,10 @@ jobs:
           pip install prefect
           pip install joblib
 
-      - name: Verify Training Script
+      - name: Verify Python Imports
         run: |
-          python -m py_compile src/models/train_model.py
-
-      - name: Verify FastAPI App
-        run: |
-          python -m py_compile src/app/main.py
-
-      - name: Verify Prefect Flow
-        run: |
-          python -m py_compile src/pipeline/flow.py
+          python -c "import src.app.main"
+          python -c "import src.pipeline.flow"
 
       - name: Build Docker Image
         run: |
