@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://carbonpilot-api.onrender.com/"
 RECOMMEND_ENDPOINT = f"{API_URL.rstrip('/')}/recommend"
 ROOT_DIR = Path(__file__).resolve().parent
 VISUAL_PATH = ROOT_DIR / "reduce_co2.jpg"
