@@ -8,7 +8,7 @@ It takes a job spec, estimates the energy cost, compares a few safe execution op
 
 Most ML systems optimize for speed, accuracy, or cost. CarbonPilot adds one more signal that matters: energy.
 
-This is not a dashboard toy. It is a working pipeline that connects data, modeling, orchestration, serving, deployment, and a clean interface.
+It is a working pipeline that connects data, modeling, orchestration, serving, deployment, and a clean interface.
 
 ## What it does
 
@@ -31,6 +31,36 @@ This is not a dashboard toy. It is a working pipeline that connects data, modeli
 * Docker for containerization
 * Kubernetes for deployment
 * GitHub Actions for CI
+
+## Workflow
+
+### Main workflow
+
+![CarbonPilot](assets/home.png)
+
+### Recommendation output
+
+![Job Spec](assets/job_spec.png)
+
+![Recommendation Results](assets/results.png)
+
+---
+
+## Kubernetes scaling
+
+CarbonPilot runs behind Kubernetes with multiple API pods. Requests are distributed across replicas during load testing.
+
+![Kubernetes Pods](assets/k8s_pods.png)
+
+![Kubernetes Load Balancing](assets/load_balance.png)
+
+---
+
+## Experiment tracking
+
+MLflow is used to track model runs, metrics, and artifacts.
+
+![MLflow Tracking](assets/mlflow.png)
 
 ## Data
 
